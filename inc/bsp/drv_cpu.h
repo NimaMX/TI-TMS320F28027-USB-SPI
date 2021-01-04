@@ -13,6 +13,7 @@
 #include <clk.h>
 #include <pie.h>
 #include <pll.h>
+#include <wdog.h>
 
 #include "inc/Utils.h"
 
@@ -27,6 +28,8 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+result_t initDsp(void);
 
 result_t initDspFlash(void);
 

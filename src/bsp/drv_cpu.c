@@ -7,13 +7,23 @@
 
 #include "inc/bsp/drv_cpu.h"
 
-static FLASH_Handle mFlash = NULL;
-static CLK_Handle mClk = NULL;
-static PIE_Handle mHandle = NULL;
+FLASH_Handle mFlash = NULL;
+CLK_Handle mClk = NULL;
+PIE_Handle mHandle = NULL;
+CPU_Handle mCpu = NULL;
+PLL_Handle mPLLClk = NULL;
+WDOG_Handle mWdog = NULL;
 
 extern Uint16 RamfuncsLoadStart;
 extern Uint16 RamfuncsLoadSize;
 extern Uint16 RamfuncsRunStart;
+
+result_t initDsp(void) {
+
+
+
+    return RES_OK;
+}
 
 result_t initDspFlash()
 {
