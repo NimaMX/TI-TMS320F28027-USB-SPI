@@ -1,0 +1,1 @@
+"./src/app/led_controller_app.obj" "./src/app/serial_controller_app.obj" "./src/bsp/drv_cpu.obj" "./src/bsp/drv_gpio.obj" "./src/bsp/drv_serial.obj" "./src/main.obj" "../F28027.cmd" -llibc.a 
