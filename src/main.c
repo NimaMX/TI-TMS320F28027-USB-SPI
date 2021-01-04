@@ -2,15 +2,6 @@
 #include "stdint.h"
 #include "stdbool.h"
 
-#include "DSP28x_Project.h"
-
-#include "clk.h"
-#include "pie.h"
-#include "pll.h"
-
-CLK_Handle mClk;
-CPU_Handle mCpu;
-
 
 
 
