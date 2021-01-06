@@ -2,9 +2,7 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-SHELL = cmd.exe
-
-CG_TOOL_ROOT := C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-c2000_20.2.4.LTS
+CG_TOOL_ROOT := /opt/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -16,14 +14,16 @@ ORDERED_OBJS += \
 "./src/bsp/drv_gpio.obj" \
 "./src/bsp/drv_serial.obj" \
 "./src/main.obj" \
-"../F28027.cmd" \
+"../F2802x_Headers_nonBIOS.cmd" \
 $(GEN_CMDS__FLAG) \
+-l"/opt/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/common/ccs/Debug/driverlib.lib" \
+-l"/opt/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/common/cmd/F2802x_generic_flash.cmd" \
 -llibc.a \
 
 -include ../makefile.init
 
-RM := DEL /F
-RMDIR := RMDIR /S/Q
+RM := rm -rf
+RMDIR := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
@@ -151,22 +151,22 @@ all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 TI-TMS320F28027-USB-TTL.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-c2000_20.2.4.LTS/bin/cl2000" -v28 -ml -mt -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"TI-TMS320F28027-USB-TTL.map" --stack_size=0x300 --warn_sections -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-c2000_20.2.4.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-c2000_20.2.4.LTS/include" -i"C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/headers/cmd" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="TI-TMS320F28027-USB-TTL_linkInfo.xml" --rom_model -o "TI-TMS320F28027-USB-TTL.out" $(ORDERED_OBJS)
+	"/opt/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/bin/cl2000" -v28 -ml -mt --advice:performance=all --define=_DEBUG --define=_FLASH --define=LARGE_MODEL -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"TI-TMS320F28027-USB-TTL.map" --stack_size=0x300 --warn_sections -i"/opt/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/lib" -i"/opt/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/include" -i"/opt/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/headers/cmd" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="TI-TMS320F28027-USB-TTL_linkInfo.xml" --entry_point=code_start --rom_model -o "TI-TMS320F28027-USB-TTL.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 TI-TMS320F28027-USB-TTL.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: C2000 Hex Utility'
-	"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-c2000_20.2.4.LTS/bin/hex2000"  -o "TI-TMS320F28027-USB-TTL.hex" $(EXE_OUTPUTS__QUOTED)
+	"/opt/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/bin/hex2000"  -o "TI-TMS320F28027-USB-TTL.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "src\app\led_controller_app.obj" "src\app\serial_controller_app.obj" "src\bsp\drv_cpu.obj" "src\bsp\drv_gpio.obj" "src\bsp\drv_serial.obj" "src\main.obj" 
-	-$(RM) "src\app\led_controller_app.d" "src\app\serial_controller_app.d" "src\bsp\drv_cpu.d" "src\bsp\drv_gpio.d" "src\bsp\drv_serial.d" "src\main.d" 
+	-$(RM) "src/app/led_controller_app.obj" "src/app/serial_controller_app.obj" "src/bsp/drv_cpu.obj" "src/bsp/drv_gpio.obj" "src/bsp/drv_serial.obj" "src/main.obj" 
+	-$(RM) "src/app/led_controller_app.d" "src/app/serial_controller_app.d" "src/bsp/drv_cpu.d" "src/bsp/drv_gpio.d" "src/bsp/drv_serial.d" "src/main.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

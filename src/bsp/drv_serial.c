@@ -5,7 +5,7 @@
  *      Author: Nima Mohammadi
  */
 
-#include <inc/bsp/drv_serial.h>
+#include <bsp/drv_usb.h>
 
 
 /**

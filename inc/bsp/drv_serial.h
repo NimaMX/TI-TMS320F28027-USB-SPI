@@ -1,21 +1,25 @@
-#ifndef _SERIAL_H
-#define _SERIAL_H
+/*
+ *  serial
+ *
+ *  Created on: Jan 3, 2021
+ *      Author: Nima Mohammadi
+ */
+
+#ifndef INC_BSP_DRV_SERIAL_H_
+#define INC_BSP_DRV_SERIAL_H_
+
+#include <DSP28x_Project.h>
+
+#include "Utils.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-void serial_init(void);
 
-void serial_write(char *s);
-
-void serial_read(char *buffer);
-
-interrupt void serial_interrupt_irq(void);
 
 #ifdef __cplusplus
 }
 #endif
 
-
-#endif /** _SERIAL_H */
+#endif /* INC_BSP_DRV_SERIAL_H_ */
