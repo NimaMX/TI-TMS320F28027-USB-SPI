@@ -9,7 +9,6 @@
 #define INC_BSP_DRV_USB_H_
 
 #include "bsp/drv_base.h"
-
 #include "Utils.h"
 
 #ifdef __cplusplus
@@ -18,7 +17,7 @@ extern "C" {
 
 result_t usbInit(void);
 
-result_t usbWriteData(char *data);
+result_t usbWriteData(char *data, uint16_t size);
 
 result_t usbReadData(uint16_t *data);
 

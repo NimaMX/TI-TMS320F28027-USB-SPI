@@ -2,18 +2,19 @@
  * drv_usb.c
  *
  *  Created on: Jan 6, 2021
- *      Author: nima
+ *      Author: nima mohammadi
  */
 
 #include "bsp/drv_usb.h"
+
+SCI_Handle mUsbSci;
 
 /**
  *
  */
 result_t usbInit(void) {
 
-    // enable SCI A clock
-    CLK_enableSciaClock((CLK_Obj *) mClk);
+    mUsbSci = SCI_init((void *) SCIA_BASE_ADDR, sizeof(SCI_Obj));
 
     //setup the gpio pins
     GPIO_setPullUp(mGpio, GPIO_Number_28, GPIO_PullUp_Enable);
@@ -25,27 +26,27 @@ result_t usbInit(void) {
     GPIO_setMode(mGpio, GPIO_Number_29, GPIO_29_Mode_SCITXDA);
 
     // enable read/write -> NO Parity, 8-bit, async, autobuad,
-    SCI_disableParity(mSci);
-    SCI_setNumStopBits(mSci, SCI_NumStopBits_One);
-    SCI_setCharLength(mSci, SCI_CharLength_8_Bits);
-    SCI_setBaudRate(mSci, SCI_BaudRate_115_2_kBaud);
+    SCI_disableParity(mUsbSci);
+    SCI_setNumStopBits(mUsbSci, SCI_NumStopBits_One);
+    SCI_setCharLength(mUsbSci, SCI_CharLength_8_Bits);
+    SCI_setBaudRate(mUsbSci, SCI_BaudRate_115_2_kBaud);
 
     // enable rx,tx and interrupts
-    SCI_enableTx(mSci);
-    SCI_enableRx(mSci);
-    SCI_enableTxInt(mSci);
-    SCI_enableRxInt(mSci);
-    SCI_enable(mSci);
+    SCI_enableTx(mUsbSci);
+    SCI_enableRx(mUsbSci);
+    SCI_enableTxInt(mUsbSci);
+    SCI_enableRxInt(mUsbSci);
+    SCI_enable(mUsbSci);
 
     // enable recv fifo
-    SCI_enableFifoEnh(mSci);
-    SCI_resetTxFifo(mSci);
-    SCI_clearTxFifoInt(mSci);
-    SCI_resetChannels(mSci);
-    SCI_setTxFifoIntLevel(mSci, SCI_FifoLevel_Empty);
-    SCI_resetRxFifo(mSci);
-    SCI_clearRxFifoInt(mSci);
-    SCI_setRxFifoIntLevel(mSci, SCI_FifoLevel_4_Words);
+    SCI_enableFifoEnh(mUsbSci);
+    SCI_resetTxFifo(mUsbSci);
+    SCI_clearTxFifoInt(mUsbSci);
+    SCI_resetChannels(mUsbSci);
+    SCI_setTxFifoIntLevel(mUsbSci, SCI_FifoLevel_Empty);
+    SCI_resetRxFifo(mUsbSci);
+    SCI_clearRxFifoInt(mUsbSci);
+    SCI_setRxFifoIntLevel(mUsbSci, SCI_FifoLevel_4_Words);
 
     return RES_OK;
 }
@@ -53,14 +54,15 @@ result_t usbInit(void) {
 /**
  *
  */
-result_t usbWriteData(char *data) {
+result_t usbWriteData(char *data, uint16_t size) {
 
-    int i = 0;
-    while(data[i] != '\0') {
+    uint16_t cnt;
 
-        while(SCI_getTxFifoStatus(mSci) != SCI_FifoLevel_Empty);
+    for(cnt = 0; cnt < size; cnt++) {
 
-        SCI_putDataBlocking(mSci, data[i]);
+        while(SCI_getTxFifoStatus(mUsbSci) != SCI_FifoLevel_Empty);
+
+        SCI_putDataBlocking(mUsbSci, data[cnt]);
 
     }
 
@@ -73,12 +75,12 @@ result_t usbWriteData(char *data) {
 result_t usbReadData(uint16_t *data) {
 
     // check for incoming data on rx line
-    while(SCI_getTxFifoStatus(mSci) < SCI_FifoStatus_1_Word) {
+    while(SCI_getTxFifoStatus(mUsbSci) < SCI_FifoStatus_1_Word) {
 
     }
 
     // read characther
-    *data = SCI_getData(mSci);
+    *data = SCI_getData(mUsbSci);
 
     return RES_OK;
 }

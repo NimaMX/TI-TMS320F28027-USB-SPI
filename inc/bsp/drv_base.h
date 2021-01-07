@@ -26,19 +26,28 @@ extern "C" {
 /**
  *
  */
-extern CPU_Handle mCpu;
-extern PLL_Handle mPll;
-extern WDOG_Handle mWdog;
-extern CLK_Handle mClk;
-extern FLASH_Handle mFlash;
-extern PIE_Handle mPie;
-extern SCI_Handle mSci;
 extern GPIO_Handle mGpio;
 
 /**
  *
  */
-void initDrvObj(void);
+void initWdog(void);
+
+/**
+ *
+ */
+void initInternalClk(void);
+
+/**
+ *
+ */
+void initPerherialsReq(void);
+
+/**
+ *
+ */
+void initFlash(void);
+
 
 #ifdef __cplusplus
 }
