@@ -1,14 +1,14 @@
 /*
- *  serial
+ *  drv_usb.h
  *
  *  Created on: Jan 5, 2021
  *      Author: Nima Mohammadi
  */
 
-#ifndef INC_BSP_DRV_SERIAL_H_
-#define INC_BSP_DRV_SERIAL_H_
+#ifndef INC_BSP_DRV_USB_H_
+#define INC_BSP_DRV_USB_H_
 
-#include <DSP28x_Project.h>
+#include "bsp/drv_base.h"
 
 #include "Utils.h"
 
@@ -16,10 +16,14 @@
 extern "C" {
 #endif
 
+result_t usbInit(void);
 
+result_t usbWriteData(char *data);
+
+result_t usbReadData(uint16_t *data);
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* INC_BSP_DRV_SERIAL_H_ */
+#endif /* INC_BSP_DRV_USB_H_ */

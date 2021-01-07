@@ -10,9 +10,12 @@ GEN_CMDS__FLAG :=
 ORDERED_OBJS += \
 "./src/app/led_controller_app.obj" \
 "./src/app/serial_controller_app.obj" \
+"./src/bsp/drv_base.obj" \
 "./src/bsp/drv_cpu.obj" \
 "./src/bsp/drv_gpio.obj" \
+"./src/bsp/drv_led.obj" \
 "./src/bsp/drv_serial.obj" \
+"./src/bsp/drv_usb.obj" \
 "./src/main.obj" \
 "../F2802x_Headers_nonBIOS.cmd" \
 $(GEN_CMDS__FLAG) \
@@ -165,8 +168,8 @@ TI-TMS320F28027-USB-TTL.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "src/app/led_controller_app.obj" "src/app/serial_controller_app.obj" "src/bsp/drv_cpu.obj" "src/bsp/drv_gpio.obj" "src/bsp/drv_serial.obj" "src/main.obj" 
-	-$(RM) "src/app/led_controller_app.d" "src/app/serial_controller_app.d" "src/bsp/drv_cpu.d" "src/bsp/drv_gpio.d" "src/bsp/drv_serial.d" "src/main.d" 
+	-$(RM) "src/app/led_controller_app.obj" "src/app/serial_controller_app.obj" "src/bsp/drv_base.obj" "src/bsp/drv_cpu.obj" "src/bsp/drv_gpio.obj" "src/bsp/drv_led.obj" "src/bsp/drv_serial.obj" "src/bsp/drv_usb.obj" "src/main.obj" 
+	-$(RM) "src/app/led_controller_app.d" "src/app/serial_controller_app.d" "src/bsp/drv_base.d" "src/bsp/drv_cpu.d" "src/bsp/drv_gpio.d" "src/bsp/drv_led.d" "src/bsp/drv_serial.d" "src/bsp/drv_usb.d" "src/main.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

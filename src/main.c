@@ -1,15 +1,11 @@
 /*
  * main.c
  */
-#include "DSP28x_Project.h" // DSP28x Headerfile
-#include "clk.h" // Header for Clock
-#include "gpio.h" // Header for GPIO
-#include "pll.h" // Header for PLL
-#include "wdog.h" // Header for Watchdog
+
 
 void main()
 {
-
+/*
     WDOG_Handle myWDog;
     myWDog = WDOG_init((void*) WDOG_BASE_ADDR, sizeof(WDOG_Obj));
     WDOG_disable(myWDog);
@@ -23,10 +19,6 @@ void main()
 
     CLK_setOscSrc(myClk, CLK_OscSrc_Internal);
 
-    /*
-     *selecting Internal Oscillator Clock 1 with a base frequency as 10 Mhz
-     *there is another clock which you can use by replacing this: “CLK_Osc2Src_Internal”
-     */
 
     PLL_setup(myPll, PLL_Multiplier_12, PLL_DivideSelect_ClkIn_by_2);
 // Selecting 60Mhz InternalClock
@@ -59,6 +51,10 @@ void main()
         GPIO_toggle(myGpio, GPIO_Number_2);
         GPIO_toggle(myGpio, GPIO_Number_3);
     }
+*/
 
+    while(1) {
+
+    }
 }
 
