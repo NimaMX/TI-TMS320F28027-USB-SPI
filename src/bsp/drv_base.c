@@ -41,7 +41,12 @@ void initInternalClk(void)
 void initPerherialsReq(void) {
     mGpio = GPIO_init((void*) GPIO_BASE_ADDR, sizeof(GPIO_Obj));
 
+    // enable usb-serial clock
     CLK_enableSciaClock((CLK_Obj*) mClk);
+
+    // enable spi clock
+    CLK_enableSpiaClock((CLK_Obj*) mClk);
+
 }
 
 void initFlash(void) {

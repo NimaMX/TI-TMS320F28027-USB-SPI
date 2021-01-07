@@ -15,6 +15,7 @@
 #include "clk.h"
 #include "pie.h"
 #include "sci.h"
+#include "spi.h"
 #include "flash.h"
 #include "pll.h"
 #include "wdog.h"

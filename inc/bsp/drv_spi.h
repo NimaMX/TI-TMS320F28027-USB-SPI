@@ -11,7 +11,6 @@
 #include "bsp/drv_base.h"
 #include "Utils.h"
 
-
 #ifdef __cplusplus
 extern "C" {
 #endif
