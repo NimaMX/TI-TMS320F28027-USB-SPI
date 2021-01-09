@@ -27,7 +27,7 @@
 	<variableList>
 		<variable>
 			<name>DSP_C2000_WARE_PATH</name>
-			<value>file:/opt/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x</value>
+			<value>file:/C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x</value>
 		</variable>
 	</variableList>
 </projectDescription>

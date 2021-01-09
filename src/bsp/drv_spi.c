@@ -21,7 +21,7 @@ void spiInit(void) {
     SPI_setClkPhase(mSpi, SPI_ClkPhase_Delayed);
 
     SPI_enable(mSpi);
-    SPI_setPriority(mSpi, priority);
+    //SPI_setPriority(mSpi, priority);
 
 }
 
