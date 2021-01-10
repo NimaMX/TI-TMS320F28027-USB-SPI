@@ -49,6 +49,10 @@ void initPerherialsReq(void);
  */
 void initFlash(void);
 
+/**
+ *
+ */
+void enablePIE(void);
 
 #ifdef __cplusplus
 }

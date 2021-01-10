@@ -5,6 +5,7 @@
 #include "bsp/drv_base.h"
 #include "bsp/drv_usb.h"
 #include "bsp/drv_led.h"
+#include "bsp/drv_spi.h"
 
 void main()
 {
@@ -17,25 +18,27 @@ void main()
     /** init interfaces and peripheral */
     ledInitGpio();
     usbInit();
+    spiInit();
 
-    //
+    enablePIE();
+
     ledRxUpdate(true);
     ledTxUpdate(true);
     ledWarningUpdate(true);
     ledErrorUpdate(true);
 
+    bool state = false;
     for(;;) {
 
-        //usbWriteData("Turning Led On\r\n", 16);
-        ledRxUpdate(true);
-        ledTxUpdate(false);
+        if(state)
+            usbWriteData("Turning Led On\r\n", 16);
+        else
+            usbWriteData("Turning Led Off\r\n", 17);
 
-        DELAY_US(1000000L);
+        ledRxUpdate(!state);
+        ledTxUpdate(state);
 
-        //usbWriteData("Turning Led Off\r\n", 17);
-        ledRxUpdate(false);
-        ledTxUpdate(true);
-
+        state = !state;
         DELAY_US(1000000L);
     }
 }

@@ -9,9 +9,6 @@
 
 SCI_Handle mUsbSci;
 
-/**
- *
- */
 result_t usbInit(void) {
 
     mUsbSci = SCI_init((void *) SCIA_BASE_ADDR, sizeof(SCI_Obj));
@@ -51,9 +48,6 @@ result_t usbInit(void) {
     return RES_OK;
 }
 
-/**
- *
- */
 result_t usbWriteData(char *data, uint16_t size) {
 
     uint16_t cnt;
@@ -69,9 +63,6 @@ result_t usbWriteData(char *data, uint16_t size) {
     return RES_OK;
 }
 
-/**
- *
- */
 result_t usbReadData(uint16_t *data) {
 
     // check for incoming data on rx line

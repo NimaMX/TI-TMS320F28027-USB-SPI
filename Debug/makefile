@@ -11,7 +11,6 @@ GEN_CMDS__FLAG :=
 
 ORDERED_OBJS += \
 "./src/bsp/drv_base.obj" \
-"./src/bsp/drv_gpio.obj" \
 "./src/bsp/drv_led.obj" \
 "./src/bsp/drv_spi.obj" \
 "./src/bsp/drv_usb.obj" \
@@ -165,8 +164,8 @@ TI-TMS320F28027-USB-TTL.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "src\bsp\drv_base.obj" "src\bsp\drv_gpio.obj" "src\bsp\drv_led.obj" "src\bsp\drv_spi.obj" "src\bsp\drv_usb.obj" "src\main.obj" 
-	-$(RM) "src\bsp\drv_base.d" "src\bsp\drv_gpio.d" "src\bsp\drv_led.d" "src\bsp\drv_spi.d" "src\bsp\drv_usb.d" "src\main.d" 
+	-$(RM) "src\bsp\drv_base.obj" "src\bsp\drv_led.obj" "src\bsp\drv_spi.obj" "src\bsp\drv_usb.obj" "src\main.obj" 
+	-$(RM) "src\bsp\drv_base.d" "src\bsp\drv_led.d" "src\bsp\drv_spi.d" "src\bsp\drv_usb.d" "src\main.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

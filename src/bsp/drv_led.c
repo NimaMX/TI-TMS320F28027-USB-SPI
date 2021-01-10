@@ -7,9 +7,6 @@
 
 #include "bsp/drv_led.h"
 
-/**
- *
- */
 void ledInitGpio(void) {
 
     // led error
@@ -29,9 +26,6 @@ void ledInitGpio(void) {
     GPIO_setDirection(mGpio, GPIO_Number_3, GPIO_Direction_Output);
 }
 
-/**
- *
- */
 void ledErrorUpdate(bool state) {
 
     if(state)
@@ -40,9 +34,6 @@ void ledErrorUpdate(bool state) {
         GPIO_setLow(mGpio, GPIO_Number_0);
 }
 
-/**
- *
- */
 void ledWarningUpdate(bool state) {
 
     if(state)
@@ -51,9 +42,6 @@ void ledWarningUpdate(bool state) {
         GPIO_setLow(mGpio, GPIO_Number_1);
 }
 
-/**
- *
- */
 void ledRxUpdate(bool state) {
 
     if(state)
@@ -62,9 +50,6 @@ void ledRxUpdate(bool state) {
         GPIO_setLow(mGpio, GPIO_Number_2);
 }
 
-/**
- *
- */
 void ledTxUpdate(bool state) {
 
     if(state)

@@ -15,11 +15,26 @@
 extern "C" {
 #endif
 
+/**
+ *
+ */
 void spiInit(void);
 
-result_t spiWriteData(char *data, uint16_t size);
+/**
+ *
+ */
+void spiWriteData(char *data, uint16_t size);
 
-result_t spiReadData(uint16_t *data);
+/**
+ *
+ */
+void spiReadData(uint16_t *data);
+
+/**
+ *
+ */
+void spiConvertToSerialBuff(char *in_buf);
+
 
 #ifdef __cplusplus
 }

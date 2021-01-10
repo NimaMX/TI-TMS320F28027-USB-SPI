@@ -16,16 +16,31 @@
 extern "C" {
 #endif
 
-
+/**
+ *
+ */
 void ledInitGpio(void);
 
+/**
+ *
+ */
 void ledErrorUpdate(bool state);
 
+/**
+ *
+ */
 void ledWarningUpdate(bool state);
 
+/**
+ *
+ */
 void ledRxUpdate(bool state);
 
+/**
+ *
+ */
 void ledTxUpdate(bool state);
+
 
 #ifdef __cplusplus
 }

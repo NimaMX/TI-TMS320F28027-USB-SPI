@@ -15,11 +15,21 @@
 extern "C" {
 #endif
 
+/**
+ *
+ */
 result_t usbInit(void);
 
+/**
+ *
+ */
 result_t usbWriteData(char *data, uint16_t size);
 
+/**
+ *
+ */
 result_t usbReadData(uint16_t *data);
+
 
 #ifdef __cplusplus
 }
