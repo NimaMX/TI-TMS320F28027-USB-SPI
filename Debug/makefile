@@ -130,34 +130,34 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-TI-TMS320F28027-USB-TTL.out \
+TI-TMS320F28027-USB-SPI.out \
 
 EXE_OUTPUTS__QUOTED += \
-"TI-TMS320F28027-USB-TTL.out" \
+"TI-TMS320F28027-USB-SPI.out" \
 
 BIN_OUTPUTS += \
-TI-TMS320F28027-USB-TTL.hex \
+TI-TMS320F28027-USB-SPI.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"TI-TMS320F28027-USB-TTL.hex" \
+"TI-TMS320F28027-USB-SPI.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "TI-TMS320F28027-USB-TTL.out"
+	@$(MAKE) --no-print-directory -Onone "TI-TMS320F28027-USB-SPI.out"
 
 # Tool invocations
-TI-TMS320F28027-USB-TTL.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+TI-TMS320F28027-USB-SPI.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/bin/cl2000" -v28 -ml -mt --advice:performance=all --define=_DEBUG --define=_FLASH --define=LARGE_MODEL -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"TI-TMS320F28027-USB-TTL.map" --stack_size=0x300 --warn_sections -i"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/lib" -i"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/include" -i"C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/headers/cmd" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="TI-TMS320F28027-USB-TTL_linkInfo.xml" --entry_point=code_start --rom_model -o "TI-TMS320F28027-USB-TTL.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/bin/cl2000" -v28 -ml -mt --advice:performance=all --define=_DEBUG --define=_FLASH --define=LARGE_MODEL -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"TI-TMS320F28027-USB-SPI.map" --stack_size=0x300 --warn_sections -i"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/lib" -i"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/include" -i"C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/headers/cmd" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="TI-TMS320F28027-USB-SPI_linkInfo.xml" --entry_point=code_start --rom_model -o "TI-TMS320F28027-USB-SPI.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
-TI-TMS320F28027-USB-TTL.hex: $(EXE_OUTPUTS)
+TI-TMS320F28027-USB-SPI.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: C2000 Hex Utility'
-	"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/bin/hex2000"  -o "TI-TMS320F28027-USB-TTL.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/bin/hex2000"  -o "TI-TMS320F28027-USB-SPI.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 

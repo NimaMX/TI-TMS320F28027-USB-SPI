@@ -4,7 +4,7 @@
    <copyright>Copyright (c) 1996-2018 Texas Instruments Incorporated</copyright>
    <link_time>0x5ffb77d5</link_time>
    <link_errors>0x0</link_errors>
-   <output_file>TI-TMS320F28027-USB-TTL.out</output_file>
+   <output_file>TI-TMS320F28027-USB-SPI.out</output_file>
    <entry_point>
       <name>code_start</name>
       <address>0x3f7ff6</address>

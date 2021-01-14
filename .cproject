@@ -181,7 +181,7 @@
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-		<project id="TI-TMS320F28027-USB-TTL.com.ti.ccstudio.buildDefinitions.C2000.ProjectType.1145518297" name="C2000" projectType="com.ti.ccstudio.buildDefinitions.C2000.ProjectType"/>
+		<project id="TI-TMS320F28027-USB-SPI.com.ti.ccstudio.buildDefinitions.C2000.ProjectType.1145518297" name="C2000" projectType="com.ti.ccstudio.buildDefinitions.C2000.ProjectType"/>
 	</storageModule>
 	<storageModule moduleId="scannerConfiguration"/>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>

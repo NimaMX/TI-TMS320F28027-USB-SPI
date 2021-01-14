@@ -1,7 +1,7 @@
 # FIXED
 
 src/bsp/drv_flash.obj: ../src/bsp/drv_flash.c
-src/bsp/drv_flash.obj: C:/Users/Nima_/workspace_v10/TI-TMS320F28027-USB-TTL/inc/bsp/drv_flash.h
+src/bsp/drv_flash.obj: C:/Users/Nima_/workspace_v10/TI-TMS320F28027-USB-SPI/inc/bsp/drv_flash.h
 src/bsp/drv_flash.obj: C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/common/include/DSP28x_Project.h
 src/bsp/drv_flash.obj: C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/headers/include/F2802x_Device.h
 src/bsp/drv_flash.obj: C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-c2000_20.2.4.LTS/include/assert.h
@@ -39,12 +39,12 @@ src/bsp/drv_flash.obj: C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/co
 src/bsp/drv_flash.obj: C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/common/include/f2802x_epwm_defines.h
 src/bsp/drv_flash.obj: C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/common/include/f2802x_i2c_defines.h
 src/bsp/drv_flash.obj: C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/common/include/f2802x_defaultisr.h
-src/bsp/drv_flash.obj: C:/Users/Nima_/workspace_v10/TI-TMS320F28027-USB-TTL/inc/Utils.h
+src/bsp/drv_flash.obj: C:/Users/Nima_/workspace_v10/TI-TMS320F28027-USB-SPI/inc/Utils.h
 src/bsp/drv_flash.obj: C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/common/include/flash.h
 src/bsp/drv_flash.obj: C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/common/include/cpu.h
 
 ../src/bsp/drv_flash.c: 
-C:/Users/Nima_/workspace_v10/TI-TMS320F28027-USB-TTL/inc/bsp/drv_flash.h: 
+C:/Users/Nima_/workspace_v10/TI-TMS320F28027-USB-SPI/inc/bsp/drv_flash.h: 
 C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/common/include/DSP28x_Project.h: 
 C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/headers/include/F2802x_Device.h: 
 C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-c2000_20.2.4.LTS/include/assert.h: 
@@ -82,6 +82,6 @@ C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/common/include/f2802x_glo
 C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/common/include/f2802x_epwm_defines.h: 
 C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/common/include/f2802x_i2c_defines.h: 
 C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/common/include/f2802x_defaultisr.h: 
-C:/Users/Nima_/workspace_v10/TI-TMS320F28027-USB-TTL/inc/Utils.h: 
+C:/Users/Nima_/workspace_v10/TI-TMS320F28027-USB-SPI/inc/Utils.h: 
 C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/common/include/flash.h: 
 C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2802x/common/include/cpu.h: 
