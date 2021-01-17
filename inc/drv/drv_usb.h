@@ -5,10 +5,10 @@
  *      Author: Nima Mohammadi
  */
 
-#ifndef INC_BSP_DRV_USB_H_
-#define INC_BSP_DRV_USB_H_
+#ifndef INC_DRV_DRV_USB_H_
+#define INC_DRV_DRV_USB_H_
 
-#include "bsp/drv_base.h"
+#include <drv/drv_base.h>
 #include "Utils.h"
 
 #ifdef __cplusplus
@@ -35,4 +35,4 @@ result_t usbReadData(uint16_t *data);
 }
 #endif
 
-#endif /* INC_BSP_DRV_USB_H_ */
+#endif /* INC_DRV_DRV_USB_H_ */

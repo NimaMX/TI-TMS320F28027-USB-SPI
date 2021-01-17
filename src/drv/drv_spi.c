@@ -5,7 +5,7 @@
  *      Author: Nima Mohammadi
  */
 
-#include "bsp/drv_spi.h"
+#include <drv/drv_spi.h>
 
 SPI_Handle mSpi;
 

@@ -5,10 +5,10 @@
  *      Author: Nima Mohammadi
  */
 
-#ifndef INC_BSP_DRV_LED_H_
-#define INC_BSP_DRV_LED_H_
+#ifndef INC_DRV_DRV_LED_H_
+#define INC_DRV_DRV_LED_H_
 
-#include "bsp/drv_base.h"
+#include <drv/drv_base.h>
 #include "Utils.h"
 
 
@@ -46,4 +46,4 @@ void ledTxUpdate(bool state);
 }
 #endif
 
-#endif /* INC_BSP_DRV_LED_H_ */
+#endif /* INC_DRV_DRV_LED_H_ */

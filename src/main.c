@@ -2,10 +2,10 @@
  * main.c
  */
 
-#include "bsp/drv_base.h"
-#include "bsp/drv_usb.h"
-#include "bsp/drv_led.h"
-#include "bsp/drv_spi.h"
+#include <drv/drv_base.h>
+#include <drv/drv_led.h>
+#include <drv/drv_spi.h>
+#include <drv/drv_usb.h>
 
 void main()
 {

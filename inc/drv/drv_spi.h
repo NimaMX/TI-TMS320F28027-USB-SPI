@@ -5,10 +5,10 @@
  *      Author: Nima Mohammadi
  */
 
-#ifndef INC_BSP_DRV_SPI_H_
-#define INC_BSP_DRV_SPI_H_
+#ifndef INC_DRV_DRV_SPI_H_
+#define INC_DRV_DRV_SPI_H_
 
-#include "bsp/drv_base.h"
+#include <drv/drv_base.h>
 #include "Utils.h"
 
 #ifdef __cplusplus
@@ -40,4 +40,4 @@ void spiConvertToSerialBuff(char *in_buf);
 }
 #endif
 
-#endif /* INC_BSP_DRV_SPI_H_ */
+#endif /* INC_DRV_DRV_SPI_H_ */

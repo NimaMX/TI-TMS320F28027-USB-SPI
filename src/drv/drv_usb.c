@@ -5,7 +5,7 @@
  *      Author: nima mohammadi
  */
 
-#include "bsp/drv_usb.h"
+#include <drv/drv_usb.h>
 
 SCI_Handle mUsbSci;
 

@@ -5,8 +5,8 @@
  *      Author: nima
  */
 
-#ifndef INC_BSP_DRV_BASE_H_
-#define INC_BSP_DRV_BASE_H_
+#ifndef INC_DRV_DRV_BASE_H_
+#define INC_DRV_DRV_BASE_H_
 
 #include "DSP28x_Project.h"
 
@@ -58,4 +58,4 @@ void enablePIE(void);
 }
 #endif
 
-#endif /* INC_BSP_DRV_BASE_H_ */
+#endif /* INC_DRV_DRV_BASE_H_ */
